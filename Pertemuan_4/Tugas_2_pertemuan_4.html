@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Mahasiswa Baru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #ffffff; /* Putih */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            color: #0056b3; /* Biru UGM */
+            margin: 0;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #0056b3; /* Biru UGM */
+            margin-top: 0;
+        }
+        p {
+            color: #777777; /* Abu-abu */
+        }
+        label {
+            font-weight: bold;
+            color: #000000; /* Hitam */
+        }
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #0056b3; /* Biru UGM */
+            color: #ffffff; /* Putih */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            float: right; /* Pindahkan ke kanan */
+            transition: background-color 0.3s ease; /* Efek transisi */
+        }
+        input[type="submit"]:hover {
+            background-color: #003d80; /* Biru UGM Gelap */
+        }
+        .logo {
+            max-width: 300px; /* Perbesar logo */
+        }
+        .btn-container {
+            overflow: hidden; /* Hindari float mengganggu layout */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1PNqk40zTHqKZ5fbt6ZjuDhmzCOMiFRfUnc14OLipi_uXzyU0ZmEVAjQLQ2JO29lPeA&usqp=CAU" alt="UGM Logo">
+        <h1>Pendaftaran Mahasiswa Baru</h1>
+    </header>
+    <form method="post" enctype="multipart/form-data">
+        <!-- Formulir -->
+        <!-- Data Pribadi -->
+        <div>
+            <h2>Data Pribadi</h2>
+            <p>* Data yang telah diinput tidak dapat diubah kembali, harap isi dengan teliti dan benar</p>
+            <label>NISN*</label>
+            <input name="nisn" type="text" placeholder="NISN" maxlength="12" required>
+            <label>NIK*</label>
+            <input name="nik" type="text" placeholder="NIK" maxlength="16" required>
+            <label>Nama Lengkap*</label>
+            <input name="namalengkap" type="text" placeholder="Nama Lengkap" maxlength="50" required>
+            <label>Jenis Kelamin*</label>
+            <select class="form-control" name="jeniskelamin">
+                <option value="L">Laki-laki</option>
+                <option value="P">Perempuan</option>
+            </select>
+            <label>Tempat Lahir*</label>
+            <input name="tempatlahir" type="text" placeholder="Tempat Lahir" maxlength="20">
+            <label>Tanggal Lahir*</label>
+            <input name="tgllahir" type="date">
+            <label>Alamat Lengkap</label><br>
+            <input name="alamat" type="text" placeholder="Alamat" required>
+            <br><br>
+            <label>Provinsi*:</label>
+            <input name="provinsi" type="text" placeholder="Provinsi" required>
+            <label>Kota/Kabupaten*:</label>
+            <input name="kota" type="text" placeholder="Kota/Kabupaten" required>
+            <label>Kecamatan*:</label>
+            <input name="kecamatan" type="text" placeholder="Kecamatan" required>
+            <label>Kelurahan*:</label>
+            <input name="kelurahan" type="text" placeholder="Kelurahan" required>
+            <label>Agama*</label>
+            <select class="form-control" name="agama">
+                <option value="Islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Katolik">Katolik</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Konghucu">Konghucu</option>
+            </select>
+            <label>No Telepon</label>
+            <input name="telepon" type="text" placeholder="No Telepon" maxlength="15" required>
+        </div>
+        <!-- Data Orang Tua -->
+        <div>
+            <h2>Data Orang Tua</h2>
+            <label>NIK Ayah*</label>
+            <input name="ayahnik" type="text" placeholder="NIK Ayah" maxlength="16">
+            <label>Nama Ayah*</label>
+            <input name="ayahnama" type="text" placeholder="Nama Ayah" maxlength="40">
+            <label>Pendidikan Ayah</label>
+            <select class="form-control" name="ayahpendidikan">
+                <option value="SD">SD</option>
+                <option value="SMP">SMP</option>
+                <option value="SMA">SMA/SMK/Sederajat</option>
+                <option value="S1">S1/Sederajat</option>
+                <option value="S2">S2</option>
+                <option value="S3">S3</option>
+            </select>
+            <label>Pekerjaan Ayah</label>
+            <select class="form-control" name="ayahpekerjaan">
+                <option value="Tidak Bekerja">Tidak Bekerja</option>
+                <option value="PNS">PNS</option>
+                <option value="Wiraswasta">Wiraswasta</option>
+                <option value="Pegawai Swasta">Pegawai Swasta</option>
+            </select>
+            <label>Penghasilan Ayah per bulan</label>
+            <select class="form-control" name="ayahpenghasilan">
+                <option value="< Rp500.000">< Rp500.000</option>
+                <option value="Rp500.000 - Rp1.000.000">Rp500.000 - Rp1.000.000</option>
+                <option value="Rp1.000.001 - Rp2.000.000">Rp1.000.001 - Rp2.000.000</option>
+                <option value="> Rp2.000.000">> Rp2.000.000</option>
+            </select>
+            <label>No Telepon Ayah</label>
+            <input name="teleponayah" type="text" placeholder="No Telepon Ayah" maxlength="15">
+            <br><br>
+            <label>NIK Ibu*</label>
+            <input name="ibunik" type="text" placeholder="NIK Ibu" maxlength="16">
+            <label>Nama Ibu*</label>
+            <input name="ibunama" type="text" placeholder="Nama Ibu" maxlength="40">
+            <label>Pendidikan Ibu</label>
+            <select class="form-control" name="ibupendidikan">
+                <option value="SD">SD</option>
+                <option value="SMP">SMP</option>
+                <option value="SMA">SMA/SMK/Sederajat</option>
+                <option value="S1">S1/Sederajat</option>
+                <option value="S2">S2</option>
+                <option value="S3">S3</option>
+            </select>
+            <label>Pekerjaan Ibu</label>
+            <select class="form-control" name="ibupekerjaan">
+                <option value="Tidak Bekerja">Tidak Bekerja</option>
+                <option value="PNS">PNS</option>
+                <option value="Wiraswasta">Wiraswasta</option>
+                <option value="Pegawai Swasta">Pegawai Swasta</option>
+            </select>
+            <label>Penghasilan Ibu per bulan</label>
+            <select class="form-control" name="ibupenghasilan">
+                <option value="< Rp500.000">< Rp500.000</option>
+                <option value="Rp500.000 - Rp1.000.000">Rp500.000 - Rp1.000.000</option>
+                <option value="Rp1.000.001 - Rp2.000.000">Rp1.000.001 - Rp2.000.000</option>
+                <option value="> Rp2.000.000">> Rp2.000.000</option>
+            </select>
+            <label>No Telepon Ibu</label>
+            <input name="teleponibu" type="text" placeholder="No Telepon Ibu" maxlength="15">
+            <br><br>
+            <label>NIK Wali</label>
+            <input name="walinik" type="text" placeholder="NIK Wali" maxlength="16">
+            <label>Nama Wali</label>
+            <input name="walinama" type="text" placeholder="Nama Wali" maxlength="40">
+            <label>Pekerjaan Wali</label>
+            <select class="form-control" name="walipekerjaan">
+                <option value="Tidak Bekerja">Tidak Bekerja</option>
+                <option value="PNS">PNS</option>
+                <option value="Wiraswasta">Wiraswasta</option>
+                <option value="Pegawai Swasta">Pegawai Swasta</option>
+            </select>
+            <label>No Telepon Wali</label>
+            <input name="teleponwali" type="text" placeholder="No Telepon Wali" maxlength="15">
+        </div>
+        <!-- Data Sekolah Asal & Berkas -->
+        <div>
+            <h2>Data Sekolah Asal & Berkas</h2>
+            <label>NPSN Sekolah Asal</label>
+            <input name="npsnsekolah" type="text" placeholder="NPSN Sekolah Asal" maxlength="10">
+            <label>Nama Sekolah Asal</label>
+            <input name="namasekolah" type="text" placeholder="Nama Sekolah Asal" maxlength="100">
+            <br><br>
+            <label>Pas Foto 4x6 (JPG/PNG), maks 500kb</label>
+            <input type="file" name="pasfoto" accept=".jpg, .png">
+            <br>
+            <label>Scan Ijazah Bagian Depan (JPG/PNG), maks 500kb</label>
+            <input type="file" name="scanijazahdepan" accept=".jpg, .png">
+            <br>
+            <label>Scan Ijazah Bagian Belakang (JPG/PNG), maks 500kb</label>
+            <input type="file" name="scanijazahbelakang" accept=".jpg, .png">
+        </div>
+        <div class="btn-container">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

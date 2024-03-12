@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elemen Form HTML</title>
+</head>
+<body>
+
+<h2>Elemen Form HTML</h2>
+
+<form>
+  <fieldset>
+    <legend>Informasi Personal</legend>
+    <label for="fname">Nama Depan:</label>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Nama Belakang:</label>
+    <input type="text" id="lname" name="lname">
+  </fieldset>
+  
+  <label for="browser">Pilih browser:</label>
+  <input list="browsers" name="browser" id="browser">
+  <datalist id="browsers">
+    <option value="Chrome">
+    <option value="Firefox">
+    <option value="Edge">
+    <option value="Safari">
+    <option value="Opera">
+  </datalist>
+  
+  <label for="x">Masukkan angka:</label>
+  <input type="number" id="x" name="x" value="0"> +
+  <label for="y">Masukkan angka lain:</label>
+  <input type="number" id="y" name="y" value="0"> =
+  <output name="result"></output><br><br>
+
+  <select id="cars" name="cars">
+    <optgroup label="Mobil Eropa">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="Mobil Asia">
+      <option value="honda">Honda</option>
+      <option value="toyota">Toyota</option>
+    </optgroup>
+  </select><br><br>
+
+  <input type="submit" value="Submit">
+  <input type="submit" formaction="/action_page2.php" value="Submit sebagai Admin">
+</form>
+
+<script>
+  document.querySelector('form').oninput = function() {
+    var x = parseInt(document.getElementById("x").value);
+    var y = parseInt(document.getElementById("y").value);
+    document.querySelector('output[name="result"]').textContent = x + y;
+  };
+</script>
+
+</body>
+</html>
