@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum JavaScript: Embed, Inline, Eksternal</title>
+    <!-- Embed JavaScript -->
+    <script>
+        function embedFunction() {
+            alert("Ini adalah fungsi embed!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Contoh Memanggil JavaScript dari Embed, Inline, Eksternal</h1>
+    
+    <!-- Inline JavaScript -->
+    <button onclick="alert('Ini adalah fungsi inline!')">Klik untuk Inline</button>
+
+    <!-- Embed JavaScript -->
+    <button onclick="embedFunction()">Klik untuk Embed</button>
+
+    <!-- Eksternal JavaScript -->
+    <button onclick="externalFunction()">Klik untuk Eksternal</button>
+
+    <!-- Memanggil file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
