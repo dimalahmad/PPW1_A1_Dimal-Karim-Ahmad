@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button class="function-btn" onclick="appendInput('√(')">√</button>
+            <button class="function-btn" onclick="appendInput('(')">(</button>
+            <button class="function-btn" onclick="appendInput(')')">)</button>
+            <button class="function-btn" onclick="appendInput('**')">^</button>
+            <button class="function-btn" onclick="appendInput('Math.sin(')">sin</button>
+            <button class="function-btn" onclick="appendInput('Math.cos(')">cos</button>
+            <button class="function-btn" onclick="appendInput('Math.tan(')">tan</button>
+            <button class="function-btn" onclick="appendInput('Math.log10(')">log</button>
+            <button onclick="appendInput('7')">7</button>
+            <button onclick="appendInput('8')">8</button>
+            <button onclick="appendInput('9')">9</button>
+            <button class="operator-btn" onclick="appendInput('*')">*</button>
+            <button onclick="appendInput('4')">4</button>
+            <button onclick="appendInput('5')">5</button>
+            <button onclick="appendInput('6')">6</button>
+            <button class="operator-btn" onclick="appendInput('/')">/</button>
+            <button onclick="appendInput('1')">1</button>
+            <button onclick="appendInput('2')">2</button>
+            <button onclick="appendInput('3')">3</button>
+            <button class="operator-btn" onclick="appendInput('+')">+</button>
+            <button onclick="appendInput('0')">0</button>
+            <button onclick="appendInput('.')">.</button>
+            <button class="operator-btn" onclick="clearDisplay()">C</button>
+            <button class="operator-btn" onclick="appendInput('-')">-</button>
+        </div>
+        <div class="bottom-buttons">
+            <button class="function-btn" onclick="deleteLastChar()">DEL</button>
+            <button class="operator-btn" id="equals-btn" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>

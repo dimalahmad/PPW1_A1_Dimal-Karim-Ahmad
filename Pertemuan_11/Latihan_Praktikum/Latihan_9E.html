@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Bitwise</title>
+</head>
+<body>
+    <script>
+        var x = 4;
+        var y = 3;
+        // operator bitwise and
+        var hasil = x & y;
+        document.write(x + " & " + y + " = " + hasil + "<br/>");
+        // operator bitwise or
+        hasil = x | y;
+        document.write(x + " | " + y + " = " + hasil + "<br/>");
+        // operator bitwise xor
+        hasil = x ^ y;
+        document.write(x + " ^ " + y + " = " + hasil + "<br/>");
+        // operator negasi
+        hasil = ~x;
+        document.write(" ~ " + x + " = " + hasil + "<br/>");
+        // operator bitwise right shift
+        hasil = x >> y;
+        document.write(x + " >> " + y + " = " + hasil + "<br/>");
+        // operator bitwise left shift
+        hasil = x << y;
+        document.write(x + " << " + y + " = " + hasil + "<br/>");
+        // operator bitwise right shift (unsigned)
+        hasil = x >>> y;
+        document.write(x + " >>> " + y + " = " + hasil + "<br/>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Value</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Masukkan angka ke-1: ");
+        var b = prompt("Masukkan angka ke-2: ");
+
+        let angkaA = parseFloat(a);
+        let angkaB = parseFloat(b);
+
+        if (angkaA > angkaB) {
+            document.write("Angka yang dimasukkan ke-1 (" + angkaA + ") lebih besar dari angka yang dimasukkan ke-2 (" + angkaB + ").");
+        } else if (angkaB > angkaA) {
+            document.write("Angka yang dimasukkan ke-2 (" + angkaB + ") lebih besar dari angka yang dimasukkan ke-1 (" + angkaA + ").");
+        } else {
+            document.write("Angka yang dimasukkan ke-1 (" + angkaA + ") sama dengan angka yang dimasukkan ke-2 (" + angkaB + ").");
+        }
+    </script>
+</body>
+</html>
